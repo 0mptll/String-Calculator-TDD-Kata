@@ -12,10 +12,16 @@ function add(num)
         delimiter = new RegExp(escaped);
         num = rest;
     }
-
     const parts = num.split(delimiter);
-    return parts.reduce((sum, n) => sum + parseInt(n, 10), 0);
 
+    for (let n of parts) {
+        const value = parseInt(n, 10);
+        if (value < 0) {
+            throw new Error(`negative numbers not allowed: ${value}`);
+        }
+    }
+
+    return parts.reduce((sum, n) => sum + parseInt(n, 10), 0);
     
 }
 
