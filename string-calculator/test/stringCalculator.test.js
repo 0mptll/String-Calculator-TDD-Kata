@@ -11,3 +11,7 @@ test('return number for single value', () => {
 test('return sum of two numbers separated by comma', () => {
   expect(add('5,2')).toBe(7);
 });
+
+test('return sum of multiple numbers', () => {
+  expect(add('1,2,3,4')).toBe(10);
+});
