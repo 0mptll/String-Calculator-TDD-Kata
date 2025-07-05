@@ -19,7 +19,6 @@ add("1\n2,3")             // → 6
 
 // Custom delimiter syntax
 add("//;\n1;2;3")         // → 6
-add("//*\n1*2*3")         // → 6
 
 // Business rule validation
 add("1,-2,3,-4")          // → Error: "negatives not allowed: -2,-4"
